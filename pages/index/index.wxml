@@ -21,7 +21,7 @@
           </view>
         </view>
         <view class="share-like">
-          <image wx:for="{{ shareLikeBefore }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ item.src }}" bindtap="shareLike" ></image>
+          <image wx:for="{{ shareLikeBefore[0] }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ item.src }}" bindtap="shareLike" ></image>
         </view>
       </view>
       <view class="pic-context-item">

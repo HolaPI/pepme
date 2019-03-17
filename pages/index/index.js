@@ -16,18 +16,34 @@ var swiperImgSrc = [
   }
 ]
 var shareLikeBefore = [
-  {
-    id: 0,
-    src: "/images/share.png"
-  },
-  {
-    id: 1,
-    src: "/images/star.png"
-  },
-  {
-    id: 2,
-    src: "/images/like.png"
-  },
+    [
+      {
+        id: 0,
+        src: "/images/share.png"
+      },
+      {
+        id: 1,
+        src: "/images/star.png"
+      },
+      {
+        id: 2,
+        src: "/images/like.png"
+      }
+  ],
+  [
+    {
+      id: 0,
+      src: "/images/share2.png"
+    },
+    {
+      id: 1,
+      src: "/images/star2.png"
+    },
+    {
+      id: 2,
+      src: "/images/like2.png"
+    }
+  ]
 ]
 var shareLikeAfter = [
   {
@@ -69,6 +85,7 @@ var content = [
     text: "Sydney, located on Australia's east coast, is the state capital of New South Wales and the most populous city in Australia and Oceania."
   }
 ]
+var shareLikeFlag = false
 Page({
   data: {
     motto: 'Hello World',
@@ -78,14 +95,17 @@ Page({
     swiperImgSrc: swiperImgSrc,
     shareLikeBefore: shareLikeBefore,
     shareLikeAfter: shareLikeAfter,
-    shareLikeFlag : false,
+    shareLikeFlag : shareLikeFlag,
     content: content
   },
   shareLike(e){
     var pos = e.target.dataset.id[0]
     console.log(pos)
-    console.log(e.target.src)
-    
+    shareLikeFlag = !shareLikeFlag
+    this.setData({
+      shareLikeFlag : shareLikeFlag
+      
+    })
     // console.log(shareLikeBefore[pos].src)
     // console.log(shareLikeAfter[pos].src)
     // e.target.src =  shareLikeAfter[pos].src

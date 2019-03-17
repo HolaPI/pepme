@@ -1,2 +1,5 @@
 <!--pages/explore/explore.wxml-->
-
+<view class="wrap">
+  <view class="filter"></view>
+  
+</view>
