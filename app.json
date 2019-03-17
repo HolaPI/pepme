@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/explore/explore",
+    "pages/me/me",
+    "pages/index/continents/Asia/asia",
+    "pages/index/continents/Africa/africa",
+    "pages/index/continents/Europe/europe",
+    "pages/index/continents/Oceania/oceania",
+    "pages/index/continents/nAmerica/namerica",
+    "pages/index/continents/sAmerica/samerica"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#acd54a",
+    "navigationBarTitleText": "pepme",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#e9f9b9",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#89b140",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Home",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home22.png"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "Explore",
+        "iconPath": "images/travel.png",
+        "selectedIconPath": "images/travel22.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "Me",
+        "iconPath": "images/friends.png",
+        "selectedIconPath": "images/friends4.png"
+      }
+    ]
+  }
+}

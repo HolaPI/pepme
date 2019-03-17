@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper class="header-swiper-group" indicator-dots indicator-color="#fff" indicator-active-color="#ff4a20" current-item-id="1">
+    <swiper-item wx:for="{{ swiperImgSrc }}" wx:for-item="swiperPic" wx:key="{{ id }}" item-id="{{ swiperPic.id }}">
+      <image src="{{ swiperPic.src }}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="home-main-content">
+    <include src="/pages/modules/navbar.wxml"/>
+    <view class="pic-context-grounp">
+      <view class="pic-context-item" wx:for="{{ content }}" wx:for-item="contentItem" wx:key="{{ id }}">
+        <view class="round-pic">
+          <image src="{{ contentItem.src }}" mode="aspectFill"></image>
+        </view>
+        <view class="item-context">
+          <view class="context-title">
+            <text>{{ contentItem.title }}</text>
+          </view>
+          <view class="context-text">
+            <text>{{ contentItem.text }}</text>
+          </view>
+        </view>
+        <view class="share-like">
+          <image wx:for="{{ shareLikeBefore }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ item.src }}" bindtap="shareLike" ></image>
+        </view>
+      </view>
+      <view class="pic-context-item">
+        <view class="round-pic">
+          <image src="http://www.zicasso.com/sites/default/files/styles/original_scaled_down/public/cleanup/sampletrip/Aerial_View1.jpg" mode="aspectFill"></image>
+        </view>
+        <view class="item-context">
+          <view class="context-title">
+            <text>Rio, Brazil: Welcome tourists from all over the world</text>
+          </view>
+          <view class="context-text">
+            <text>Rio de Janeiro is anchor to the Rio de Janeiro metropolitan area and the second-most populous municipality in Brazil and the sixth-most populous in the Americas.</text>
+          </view>
+        </view>
+        <view class="share-like">
+          <image src="/images/share2.png"></image>
+          <image src="/images/star2.png"></image>
+          <image src="/images/like2.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

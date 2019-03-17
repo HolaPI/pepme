@@ -1,0 +1,80 @@
+/**index.wxss**/
+.container .header-swiper-group{
+  width: 100%;
+  border-top: 1px solid #acd54a;
+  /* border: 1px solid #ff4400; */
+  height: 200px;
+}
+.header-swiper-group swiper-item image{
+  width: 100%;
+}
+.container .home-main-content{
+  width: 100%;
+}
+.home-main-content .horizon-menu{
+  background-color: #e9f9b9;
+}
+.home-main-content .horizon-menu .navbar{
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-around; 
+}
+.home-main-content .horizon-menu #firstline{
+  border-bottom: 1px solid #acd54a;
+}
+.horizon-menu .navbar navigator{
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0px;
+}
+.pic-context-grounp .pic-context-item{
+  display: flex;
+  justify-content: space-around;
+  height: 90px;
+  width: 100%;
+  margin-top: 10px;
+  /* background-color: #eee; */
+  /* border: 1px solid red; */
+}
+.pic-context-grounp .pic-context-item .round-pic{
+  width: 90px;
+  overflow: hidden;
+  /* border: 1px solid blue; */
+}
+.pic-context-grounp .pic-context-item .round-pic image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.pic-context-grounp .pic-context-item .item-context{
+  width: calc(96% - 120px);
+  padding-top: 2px;
+  /* border: 1px solid blue; */
+  
+}
+.pic-context-grounp .pic-context-item .item-context .context-title{
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pic-context-grounp .pic-context-item .item-context .context-text{
+  height: 70px;
+  font-size: 12px;
+  line-height: 16px;
+  word-break: break-all;
+}
+.pic-context-grounp .pic-context-item .share-like{
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid blue; */
+}
+.pic-context-grounp .pic-context-item .share-like image{
+  width: 100%;
+  height: 100%;
+}
