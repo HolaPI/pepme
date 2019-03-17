@@ -15,49 +15,22 @@ var swiperImgSrc = [
     src: "http://europeanfocus.paintscapewordpresshost.net/wp-content/uploads/2011/05/CottagesAtSunset-copy.jpg"
   }
 ]
-var shareLikeBefore = [
-    [
-      {
-        id: 0,
-        src: "/images/share.png"
-      },
-      {
-        id: 1,
-        src: "/images/star.png"
-      },
-      {
-        id: 2,
-        src: "/images/like.png"
-      }
-  ],
-  [
-    {
-      id: 0,
-      src: "/images/share2.png"
-    },
-    {
-      id: 1,
-      src: "/images/star2.png"
-    },
-    {
-      id: 2,
-      src: "/images/like2.png"
-    }
-  ]
-]
-var shareLikeAfter = [
+var shareLikeIcon = [
   {
     id: 0,
-    src: "/images/share2.png"
+    bfeSrc: "/images/share.png",
+    aftSrc: "/images/share2.png"
   },
   {
     id: 1,
-    src: "/images/star2.png"
+    bfeSrc: "/images/star.png",
+    aftSrc: "/images/star2.png"
   },
   {
     id: 2,
-    src: "/images/like2.png"
-  },
+    bfeSrc: "/images/like.png",
+    aftSrc: "/images/like2.png"
+  }
 ]
 var content = [
   {
@@ -93,25 +66,22 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     swiperImgSrc: swiperImgSrc,
-    shareLikeBefore: shareLikeBefore,
-    shareLikeAfter: shareLikeAfter,
+    shareLikeIcon: shareLikeIcon,
     shareLikeFlag : shareLikeFlag,
     content: content
   },
+  /**
+   * share-like icons click event
+   */
   shareLike(e){
-    var pos = e.target.dataset.id[0]
+    var pos = e.target.dataset.id
     console.log(pos)
+    //set a flag to monitor share-like icons status
     shareLikeFlag = !shareLikeFlag
     this.setData({
       shareLikeFlag : shareLikeFlag
-      
     })
-    // console.log(shareLikeBefore[pos].src)
-    // console.log(shareLikeAfter[pos].src)
-    // e.target.src =  shareLikeAfter[pos].src
-    // this.setData({
-    //   shareLikeBefore: shareLikeBefore
-    // })
+    
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

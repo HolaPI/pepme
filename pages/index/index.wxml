@@ -1,13 +1,17 @@
 <!--index.wxml-->
 <view class="container">
+  <!-- header-swiper part -->
   <swiper class="header-swiper-group" indicator-dots indicator-color="#fff" indicator-active-color="#ff4a20" current-item-id="1">
     <swiper-item wx:for="{{ swiperImgSrc }}" wx:for-item="swiperPic" wx:key="{{ id }}" item-id="{{ swiperPic.id }}">
       <image src="{{ swiperPic.src }}"></image>
     </swiper-item>
   </swiper>
   <view class="home-main-content">
+    <!-- include navbar for modules file -->
     <include src="/pages/modules/navbar.wxml"/>
+    <!-- main content area -->
     <view class="pic-context-grounp">
+      <!-- use for-loop to achieve adding single content part -->
       <view class="pic-context-item" wx:for="{{ content }}" wx:for-item="contentItem" wx:key="{{ id }}">
         <view class="round-pic">
           <image src="{{ contentItem.src }}" mode="aspectFill"></image>
@@ -20,11 +24,12 @@
             <text>{{ contentItem.text }}</text>
           </view>
         </view>
+        <!-- add share-like icons -->
         <view class="share-like">
-          <image wx:for="{{ shareLikeBefore[0] }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ item.src }}" bindtap="shareLike" ></image>
+          <image wx:for="{{ shareLikeIcon }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ item.bfeSrc }}" bindtap="shareLike" ></image>
         </view>
       </view>
-      <view class="pic-context-item">
+      <!-- <view class="pic-context-item">
         <view class="round-pic">
           <image src="http://www.zicasso.com/sites/default/files/styles/original_scaled_down/public/cleanup/sampletrip/Aerial_View1.jpg" mode="aspectFill"></image>
         </view>
@@ -41,7 +46,7 @@
           <image src="/images/star2.png"></image>
           <image src="/images/like2.png"></image>
         </view>
-      </view>
+      </view> -->
     </view>
   </view>
 </view>
