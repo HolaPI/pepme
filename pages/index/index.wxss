@@ -33,9 +33,9 @@
   justify-content: space-around;
   height: 90px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 8px;
   /* background-color: #eee; */
-  /* border: 1px solid red; */
+  /* border-bottom: 1px solid #ddd; */
 }
 .pic-context-grounp .pic-context-item .round-pic{
   width: 90px;
@@ -51,6 +51,7 @@
   width: calc(96% - 120px);
   padding-top: 2px;
   /* border: 1px solid blue; */
+  border-bottom: 1px solid #e9f9b9;
   
 }
 .pic-context-grounp .pic-context-item .item-context .context-title{

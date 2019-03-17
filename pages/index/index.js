@@ -56,6 +56,18 @@ var content = [
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Sydney_Opera_House_01.jpg/1200px-Sydney_Opera_House_01.jpg",
     title: "Sydney, Australia: Welcome tourists from all over the world",
     text: "Sydney, located on Australia's east coast, is the state capital of New South Wales and the most populous city in Australia and Oceania."
+  },
+  {
+    id: 4,
+    src: "https://s4827.pcdn.co/wp-content/uploads/2017/11/sanfrancisco.jpg",
+    title: "San Francisco, America: Welcome tourists from all over the world",
+    text: "San Francisco, officially the City and County of San Francisco, is the cultural, commercial, and financial center of Northern California. "
+  },
+  {
+    id: 5,
+    src: "http://www.orangesmile.com/common/img_final_large/casablanca_sightseeing.jpg",
+    title: "Casablanca, Morocco: Welcome tourists from all over the world",
+    text: "Casablanca, located in the central-western part of Morocco and bordering the Atlantic Ocean, is the largest city in the Kingdom of Morocco."
   }
 ]
 var shareLikeFlag = false
