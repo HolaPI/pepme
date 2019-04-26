@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <!-- header-swiper part -->
-  <swiper class="header-swiper-group" indicator-dots indicator-color="#fff" indicator-active-color="#ff4a20" current-item-id="0">
+  <swiper class="header-swiper-group" indicator-dots indicator-color="#fff" indicator-active-color="#ff4a20" current-item-id="0" circular='true' autoplay='true'>
     <swiper-item wx:for="{{ swiperImgSrc }}" wx:for-item="swiperPic" wx:key="{{ id }}" item-id="{{ swiperPic.id }}">
       <image src="{{ swiperPic.src }}"></image>
     </swiper-item>
@@ -26,7 +26,7 @@
         </view>
         <!-- add share-like icons -->
         <view class="share-like">
-          <image wx:for="{{ shareLikeIcon }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ item.bfeSrc }}" bindtap="shareLike" ></image>
+          <image wx:for="{{ shareLikeIcon }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ shareLikeFlag && shareLikePos == item.id + '' + contentItem.id ? item.aftSrc : item.bfeSrc }}" bindtap="shareLike" ></image>
         </view>
       </view>
       <!-- <view class="pic-context-item">

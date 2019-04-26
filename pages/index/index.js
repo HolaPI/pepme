@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-var swiperImgSrc = [
+const swiperImgSrc = [
   {
     id: 0,
     src: "https://www.nordicvisitor.com/images/sweden/countryside-and-natural-scenary.jpg"
@@ -15,7 +15,7 @@ var swiperImgSrc = [
     src: "http://europeanfocus.paintscapewordpresshost.net/wp-content/uploads/2011/05/CottagesAtSunset-copy.jpg"
   }
 ]
-var shareLikeIcon = [
+const shareLikeIcon = [
   {
     id: 0,
     bfeSrc: "/images/share.png",
@@ -32,7 +32,7 @@ var shareLikeIcon = [
     aftSrc: "/images/like2.png"
   }
 ]
-var content = [
+const content = [
   {
     id : 0,
     src: "http://img.news.sina.com/life/p/2012/0710/U140P5029T2D485177F32DT20120711120217.jpg",
@@ -70,7 +70,7 @@ var content = [
     text: "Casablanca, located in the central-western part of Morocco and bordering the Atlantic Ocean, is the largest city in the Kingdom of Morocco."
   }
 ]
-var shareLikeFlag = false
+// let shareLikeFlag = false
 Page({
   data: {
     motto: 'Hello World',
@@ -79,19 +79,24 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     swiperImgSrc: swiperImgSrc,
     shareLikeIcon: shareLikeIcon,
-    shareLikeFlag : shareLikeFlag,
+    shareLikeFlag: false,
+    shareLikePos: '',
     content: content
   },
   /**
    * share-like icons click event
    */
   shareLike(e){
-    var pos = e.target.dataset.id
+    const self = this;
+    let pos = e.target.dataset.id
     console.log(pos)
+    console.log(self.data.shareLikeFlag, self.data.shareLikePos)
+    console.log(e)
     //set a flag to monitor share-like icons status
-    shareLikeFlag = !shareLikeFlag
+    // shareLikeFlag = !shareLikeFlag
     this.setData({
-      shareLikeFlag : shareLikeFlag
+      shareLikeFlag : !self.data.shareLikeFlag,
+      shareLikePos : pos
     })
     
   },
