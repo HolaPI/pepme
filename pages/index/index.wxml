@@ -24,12 +24,12 @@
             <text>{{ contentItem.text }}</text>
           </view>
         </view>
-        <!-- add share-like icons -->
+        <!-- add share-like-keep icons -->
         <view class="share-like">
+        <!-- bind event respectively for three kinds of icons -->
           <image src="{{ !contentItem.shareFlag ? shareLikeIcon[0].bfeSrc : shareLikeIcon[0].aftSrc}}" bindtap="shareItem" data-id="{{ contentItem.id }}"></image>
           <image src="{{ !contentItem.keepFlag ? shareLikeIcon[1].bfeSrc : shareLikeIcon[1].aftSrc }}" bindtap="keepItem" data-id="{{ contentItem.id }}" ></image>
           <image src="{{ !contentItem.likeFlag ? shareLikeIcon[2].bfeSrc : shareLikeIcon[2].aftSrc }}" bindtap="likeItem" data-id="{{ contentItem.id }}"></image>
-          <!-- <image wx:for="{{ shareLikeIcon }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ shareLikeFlag && shareLikePos == item.id + '' + contentItem.id ? item.aftSrc : item.bfeSrc }}" bindtap="shareLike" ></image> -->
         </view>
       </view>
     </view>
