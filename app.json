@@ -41,5 +41,6 @@
         "selectedIconPath": "images/friends4.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

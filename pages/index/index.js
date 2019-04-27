@@ -37,7 +37,10 @@ const content = [
     id : 0,
     src: "http://img.news.sina.com/life/p/2012/0710/U140P5029T2D485177F32DT20120711120217.jpg",
     title: "Bayern, Germany: Welcome tourists from all over the world",
-    text: "Der Freistaat Bayern ist mit mehr als 70500 Quadratkilometern das flächengrößte der 16 Länder in Deutschland und liegt in dessen Südosten."
+    text: "Der Freistaat Bayern ist mit mehr als 70500 Quadratkilometern das flächengrößte der 16 Länder in Deutschland und liegt in dessen Südosten.",
+    shareFlag: false,
+    keepFlag: false,
+    likeFlag: false
   },
   {
     id: 1,
@@ -79,26 +82,36 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     swiperImgSrc: swiperImgSrc,
     shareLikeIcon: shareLikeIcon,
-    shareLikeFlag: false,
-    shareLikePos: '',
     content: content
   },
   /**
    * share-like icons click event
    */
-  shareLike(e){
+  shareItem(e){
     const self = this;
     let pos = e.target.dataset.id
-    console.log(pos)
-    console.log(self.data.shareLikeFlag, self.data.shareLikePos)
-    console.log(e)
-    //set a flag to monitor share-like icons status
-    // shareLikeFlag = !shareLikeFlag
+    //标记分享状态
+    content[pos].shareFlag = !content[pos].shareFlag
     this.setData({
-      shareLikeFlag : !self.data.shareLikeFlag,
-      shareLikePos : pos
+      //更新content内容
+      content: content
     })
-    
+  },
+  keepItem(e){
+    const self = this;
+    let pos = e.target.dataset.id;
+    content[pos].keepFlag = !content[pos].keepFlag
+    this.setData({
+      content: content
+    })
+  },
+  likeItem(e){
+    const self = this;
+    let pos = e.target.dataset.id;
+    content[pos].likeFlag = !content[pos].likeFlag
+    this.setData({
+      content: content
+    })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

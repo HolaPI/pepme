@@ -8,7 +8,7 @@
   </swiper>
   <view class="home-main-content">
     <!-- include navbar for modules file -->
-    <include src="/pages/modules/navbar.wxml"/>
+    <include src="/pages/modules/navbar/navbar.wxml"/>
     <!-- main content area -->
     <view class="pic-context-grounp">
       <!-- use for-loop to achieve adding single content part -->
@@ -26,27 +26,12 @@
         </view>
         <!-- add share-like icons -->
         <view class="share-like">
-          <image wx:for="{{ shareLikeIcon }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ shareLikeFlag && shareLikePos == item.id + '' + contentItem.id ? item.aftSrc : item.bfeSrc }}" bindtap="shareLike" ></image>
+          <image src="{{ !contentItem.shareFlag ? shareLikeIcon[0].bfeSrc : shareLikeIcon[0].aftSrc}}" bindtap="shareItem" data-id="{{ contentItem.id }}"></image>
+          <image src="{{ !contentItem.keepFlag ? shareLikeIcon[1].bfeSrc : shareLikeIcon[1].aftSrc }}" bindtap="keepItem" data-id="{{ contentItem.id }}" ></image>
+          <image src="{{ !contentItem.likeFlag ? shareLikeIcon[2].bfeSrc : shareLikeIcon[2].aftSrc }}" bindtap="likeItem" data-id="{{ contentItem.id }}"></image>
+          <!-- <image wx:for="{{ shareLikeIcon }}" wx:key="{{ id }}" data-id="{{ item.id }}{{ contentItem.id }}" src="{{ shareLikeFlag && shareLikePos == item.id + '' + contentItem.id ? item.aftSrc : item.bfeSrc }}" bindtap="shareLike" ></image> -->
         </view>
       </view>
-      <!-- <view class="pic-context-item">
-        <view class="round-pic">
-          <image src="http://www.zicasso.com/sites/default/files/styles/original_scaled_down/public/cleanup/sampletrip/Aerial_View1.jpg" mode="aspectFill"></image>
-        </view>
-        <view class="item-context">
-          <view class="context-title">
-            <text>Rio, Brazil: Welcome tourists from all over the world</text>
-          </view>
-          <view class="context-text">
-            <text>Rio de Janeiro is anchor to the Rio de Janeiro metropolitan area and the second-most populous municipality in Brazil and the sixth-most populous in the Americas.</text>
-          </view>
-        </view>
-        <view class="share-like">
-          <image src="/images/share2.png"></image>
-          <image src="/images/star2.png"></image>
-          <image src="/images/like2.png"></image>
-        </view>
-      </view> -->
     </view>
   </view>
 </view>
