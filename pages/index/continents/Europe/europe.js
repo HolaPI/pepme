@@ -25,6 +25,7 @@ Page({
       //更新content内容
       content: content
     })
+    wx.vibrateShort({})
   },
   keepItem(e) {
     const self = this;
@@ -36,6 +37,7 @@ Page({
     this.setData({
       content: content
     })
+    wx.vibrateShort({})
   },
   likeItem(e) {
     const self = this;
@@ -47,6 +49,7 @@ Page({
     this.setData({
       content: content
     })
+    wx.vibrateShort({})
   },
   /**
    * 生命周期函数--监听页面加载

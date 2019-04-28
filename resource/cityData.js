@@ -13,6 +13,11 @@ const shareLikeIcon = [
     id: 2,
     bfeSrc: "/images/like.png",
     aftSrc: "/images/like2.png"
+  },
+  {
+    id: 3,
+    bfeSrc: "/images/comment.png",
+    aftSrc: "/images/comment2.png"
   }
 ]
 //特别推荐
@@ -26,7 +31,7 @@ const special = [
     shareFlag: false,
     keepFlag: false,
     likeFlag: false,
-    ratings: 0
+    ratings: 234
   },
   {
     id: 1,
@@ -37,7 +42,7 @@ const special = [
     shareFlag: false,
     keepFlag: false,
     likeFlag: false,
-    ratings: 0
+    ratings: 1245
   },
   {
     id: 2,
@@ -48,7 +53,7 @@ const special = [
     shareFlag: false,
     keepFlag: false,
     likeFlag: false,
-    ratings: 0
+    ratings: 432
   }
 ]
 //所有城市信息

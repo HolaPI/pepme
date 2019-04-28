@@ -30,25 +30,26 @@ Page({
       //更新content内容
       content: content
     })
-    wx.vibrateLong({
-
-    })
+  //点击触发短振动
+  wx.vibrateShort({})
   },
-keepItem(e) {
+  keepItem(e) {
     const self = this;
     let pos = e.target.dataset.id;
     content[pos].keepFlag = !content[pos].keepFlag
     this.setData({
       content: content
     })
+  wx.vibrateShort({})
   },
-likeItem(e) {
+  likeItem(e) {
     const self = this;
     let pos = e.target.dataset.id;
-    content[pos].likeFlag = !content[pos].likeFlag
+    content[pos].likeFlag = !content[pos].likeFlag;
     this.setData({
       content: content
     })
+    wx.vibrateShort({})
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

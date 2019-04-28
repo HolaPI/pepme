@@ -1,6 +1,54 @@
 <!--pages/special/special.wxml-->
 <view class='container'>
   <view class='pic-wrapper'>
-    <image src='{{ swiperImg[0].src }}' mode='aspectFill'></image>
+    <image src='{{ swiperImg[swiperImgId].src }}' mode='aspectFill'></image>
+  </view>
+  <view class='title-wrapper'>
+    <view>{{ swiperImg[swiperImgId].title }}</view>
+  </view>
+  <view class='article-operation'>
+    <view class='icon-wrapper'>
+      <image src='{{ shareLikeIcon[3].bfeSrc }}'></image>
+      <text>353</text>
+    </view>
+    <view class='icon-wrapper'>
+      <image src='{{ shareLikeIcon[2].bfeSrc }}'></image>
+      <text>745</text>
+    </view>
+    <view class='icon-wrapper'>
+      <image src='{{ shareLikeIcon[1].bfeSrc }}'></image>
+      <text>34</text>
+    </view>
+    <view class='icon-wrapper'>
+      <image src='{{ shareLikeIcon[0].bfeSrc }}'></image>
+      <text>986</text>
+    </view>
+  </view>
+  <view class='text-wrapper'>
+    <view>{{ swiperImg[swiperImgId].text }}</view>
+    <view>
+      {{ swiperImg[swiperImgId].text }}
+      {{ swiperImg[swiperImgId].text }}
+      {{ swiperImg[swiperImgId].text }}
+      {{ swiperImg[swiperImgId].text }}
+    </view>
+    <view>
+      {{ swiperImg[swiperImgId].text }}
+      {{ swiperImg[swiperImgId].text }}
+    </view>
+  </view>
+  <view class='end-info'>
+    <text>【END】</text>
+  </view>
+  <view class='comments-wrapper'> 
+    <view class='comment-group'></view>
+  </view>
+  <view class='post-wrapper'>
+    <view class='post-comment'>
+      <view class='input'>
+        <input type='text' placeholder='say something...'></input>
+      </view>
+      <button size='mini'>POST</button>
+  </view>
   </view>
 </view>
