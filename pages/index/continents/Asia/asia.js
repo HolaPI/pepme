@@ -1,9 +1,11 @@
 // pages/index/continents/Asia/asia.js
 const cityData = require('../../../../resource/cityData.js')
 const shareLikeIcon = cityData.shareLikeIcon;
-const content = cityData.content;
+//过滤出亚洲城市
+const content = cityData.content.filter(city =>{
+  return city.continent == 'asia';
+});
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -14,8 +16,11 @@ Page({
   shareItem(e) {
     const self = this;
     let pos = e.target.dataset.id
+    let ret = content.filter(city => {
+      return city.id == pos
+    })
     //标记分享状态
-    content[pos].shareFlag = !content[pos].shareFlag
+    ret[0].shareFlag = !ret[0].shareFlag
     this.setData({
       //更新content内容
       content: content
@@ -24,7 +29,10 @@ Page({
   keepItem(e) {
     const self = this;
     let pos = e.target.dataset.id;
-    content[pos].keepFlag = !content[pos].keepFlag
+    let ret = content.filter(city => {
+      return city.id == pos
+    })
+    ret[0].keepFlag = !ret[0].keepFlag
     this.setData({
       content: content
     })
@@ -32,7 +40,10 @@ Page({
   likeItem(e) {
     const self = this;
     let pos = e.target.dataset.id;
-    content[pos].likeFlag = !content[pos].likeFlag
+    let ret = content.filter(city => {
+      return city.id == pos
+    })
+    ret[0].likeFlag = !ret[0].likeFlag
     this.setData({
       content: content
     })
@@ -41,7 +52,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
   },
 
   /**

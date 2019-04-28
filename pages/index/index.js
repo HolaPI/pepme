@@ -4,22 +4,9 @@ const cityData = require('../../resource/cityData.js')
 // const shareLike = require('../../common/shareLike.js')
 const shareLikeIcon = cityData.shareLikeIcon;
 const content = cityData.content;
+const swiperImg = cityData.special;
 //获取应用实例
 const app = getApp()
-const swiperImgSrc = [
-  {
-    id: 0,
-    src: "https://www.nordicvisitor.com/images/sweden/countryside-and-natural-scenary.jpg"
-  },
-  {
-    id: 1,
-    src: "https://farm2.staticflickr.com/1583/24911819103_6a4405b9d3_o.jpg"
-  },
-  {
-    id: 2,
-    src: "http://europeanfocus.paintscapewordpresshost.net/wp-content/uploads/2011/05/CottagesAtSunset-copy.jpg"
-  }
-]
 
 Page({
   data: {
@@ -27,7 +14,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    swiperImgSrc: swiperImgSrc,
+    swiperImg: swiperImg,
     shareLikeIcon: shareLikeIcon,
     content: content
   },
@@ -42,6 +29,9 @@ Page({
   this.setData({
       //更新content内容
       content: content
+    })
+    wx.vibrateLong({
+
     })
   },
 keepItem(e) {

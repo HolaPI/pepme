@@ -2,8 +2,10 @@
 <view class="container">
   <!-- header-swiper part -->
   <swiper class="header-swiper-group" indicator-dots indicator-color="#fff" indicator-active-color="#ff4a20" current-item-id="0" circular='true' autoplay='true'>
-    <swiper-item wx:for="{{ swiperImgSrc }}" wx:for-item="swiperPic" wx:key="{{ id }}" item-id="{{ swiperPic.id }}">
-      <image src="{{ swiperPic.src }}"></image>
+    <swiper-item wx:for="{{ swiperImg }}" wx:for-item="swiperPic" wx:key="{{ id }}" item-id="{{ swiperPic.id }}">
+      <navigator url="../special/special">
+        <image src="{{ swiperPic.src }}"></image>
+      </navigator>
     </swiper-item>
   </swiper>
   <view class="home-main-content">

@@ -1,2 +1,25 @@
 <!--pages/index/continents/Europe/europe.wxml-->
-<text>pages/index/continents/Europe/europe.wxml</text>
+<!--pages/index/continents/Asia/asia.wxml-->
+<view class="pic-context-grounp">
+      <!-- use for-loop to achieve adding single content part -->
+      <view class="pic-context-item" wx:for="{{ content }}" wx:for-item="contentItem" wx:key="{{ id }}">
+        <view class="round-pic">
+          <image src="{{ contentItem.src }}" mode="aspectFill"></image>
+        </view>
+        <view class="item-context">
+          <view class="context-title">
+            <text>{{ contentItem.title }}</text>
+          </view>
+          <view class="context-text">
+            <text>{{ contentItem.text }}</text>
+          </view>
+        </view>
+        <!-- add share-like-keep icons -->
+        <view class="share-like">
+        <!-- bind event respectively for three kinds of icons -->
+          <image src="{{ !contentItem.shareFlag ? shareLikeIcon[0].bfeSrc : shareLikeIcon[0].aftSrc}}" bindtap="shareItem" data-id="{{ contentItem.id }}"></image>
+          <image src="{{ !contentItem.keepFlag ? shareLikeIcon[1].bfeSrc : shareLikeIcon[1].aftSrc }}" bindtap="keepItem" data-id="{{ contentItem.id }}" ></image>
+          <image src="{{ !contentItem.likeFlag ? shareLikeIcon[2].bfeSrc : shareLikeIcon[2].aftSrc }}" bindtap="likeItem" data-id="{{ contentItem.id }}"></image>
+        </view>
+      </view>
+    </view>

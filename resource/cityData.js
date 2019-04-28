@@ -15,6 +15,43 @@ const shareLikeIcon = [
     aftSrc: "/images/like2.png"
   }
 ]
+//特别推荐
+const special = [
+  {
+    id: 0,
+    src: "https://www.nordicvisitor.com/images/sweden/countryside-and-natural-scenary.jpg",
+    title: "Bayern, Germany: Welcome tourists from all over the world",
+    text: "Der Freistaat Bayern ist mit mehr als 70500 Quadratkilometern das flächengrößte der 16 Länder in Deutschland und liegt in dessen Südosten.",
+    continent: 'europe',
+    shareFlag: false,
+    keepFlag: false,
+    likeFlag: false,
+    ratings: 0
+  },
+  {
+    id: 1,
+    src: "https://farm2.staticflickr.com/1583/24911819103_6a4405b9d3_o.jpg",
+    title: "Bayern, Germany: Welcome tourists from all over the world",
+    text: "Der Freistaat Bayern ist mit mehr als 70500 Quadratkilometern das flächengrößte der 16 Länder in Deutschland und liegt in dessen Südosten.",
+    continent: 'europe',
+    shareFlag: false,
+    keepFlag: false,
+    likeFlag: false,
+    ratings: 0
+  },
+  {
+    id: 2,
+    src: "http://europeanfocus.paintscapewordpresshost.net/wp-content/uploads/2011/05/CottagesAtSunset-copy.jpg",
+    title: "Bayern, Germany: Welcome tourists from all over the world",
+    text: "Der Freistaat Bayern ist mit mehr als 70500 Quadratkilometern das flächengrößte der 16 Länder in Deutschland und liegt in dessen Südosten.",
+    continent: 'europe',
+    shareFlag: false,
+    keepFlag: false,
+    likeFlag: false,
+    ratings: 0
+  }
+]
+//所有城市信息
 const content = [
   {
     id: 0,
@@ -85,5 +122,6 @@ const content = [
 ]
 module.exports = {
   shareLikeIcon,
+  special,
   content
 }

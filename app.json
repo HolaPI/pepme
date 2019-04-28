@@ -8,7 +8,8 @@
     "pages/index/continents/Europe/europe",
     "pages/index/continents/Oceania/oceania",
     "pages/index/continents/nAmerica/namerica",
-    "pages/index/continents/sAmerica/samerica"
+    "pages/index/continents/sAmerica/samerica",
+    "pages/special/special"
   ],
   "window": {
     "backgroundTextStyle": "dark",

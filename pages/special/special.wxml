@@ -1,0 +1,6 @@
+<!--pages/special/special.wxml-->
+<view class='container'>
+  <view class='pic-wrapper'>
+    <image src='{{ swiperImg[0].src }}' mode='aspectFill'></image>
+  </view>
+</view>
