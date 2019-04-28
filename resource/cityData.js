@@ -31,7 +31,21 @@ const special = [
     shareFlag: false,
     keepFlag: false,
     likeFlag: false,
-    ratings: 234
+    ratings: 234,
+    comments: [
+      {
+        user: 'WEN',
+        time: null,
+        avatar: '/images/explore2.png',
+        context: 'Nice place, wish to be there one day.Nice place, wish to be there one day.Nice place, wish to be there one day.'
+      },
+      {
+        user: 'WXW',
+        time: null,
+        avatar: '/images/camping2.png',
+        context: 'Dude, really a nice spot.'
+      }
+    ]
   },
   {
     id: 1,

@@ -41,7 +41,16 @@
     <text>【END】</text>
   </view>
   <view class='comments-wrapper'> 
-    <view class='comment-group'></view>
+    <view class='comment-group'>
+      <view>Comments ({{ swiperImg[swiperImgId].comments.length }})</view>
+      <view class='comment-item' wx:for='{{ swiperImg[swiperImgId].comments }}' wx:for-item='commentItem' wx:key='{{ user }}'>
+        <image class='userImg' src='{{ commentItem.avatar }}'></image>
+        <view class='comment-content'>
+          <text>{{ commentItem.user }}:</text>
+          <view>{{ commentItem.context }}</view>
+        </view>
+      </view>
+    </view>
   </view>
   <view class='post-wrapper'>
     <view class='post-comment'>
