@@ -42,7 +42,7 @@
   </view>
   <view class='comments-wrapper'> 
     <view class='comment-group'>
-      <view>Comments ({{ swiperImg[swiperImgId].comments.length }})</view>
+      <view wx:if='{{ swiperImg[swiperImgId].comments.length }} > 0'>Comments ({{ swiperImg[swiperImgId].comments.length }})</view>
       <view class='comment-item' wx:for='{{ swiperImg[swiperImgId].comments }}' wx:for-item='commentItem' wx:key='{{ user }}'>
         <image class='userImg' src='{{ commentItem.avatar }}'></image>
         <view class='comment-content'>

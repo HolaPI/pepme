@@ -37,7 +37,7 @@ const special = [
         user: 'WEN',
         time: null,
         avatar: '/images/explore2.png',
-        context: 'Nice place, wish to be there one day.Nice place, wish to be there one day.Nice place, wish to be there one day.'
+        context: 'Nice place, wish to be there one day. Nice place, wish to be there one day. Nice place, wish to be there one day.'
       },
       {
         user: 'WXW',
@@ -56,7 +56,15 @@ const special = [
     shareFlag: false,
     keepFlag: false,
     likeFlag: false,
-    ratings: 1245
+    ratings: 1245,
+    comments: [
+      {
+        user: 'WXW',
+        time: null,
+        avatar: '/images/camping2.png',
+        context: 'Great, really a nice spot.'
+      }
+    ]
   },
   {
     id: 2,
@@ -67,7 +75,15 @@ const special = [
     shareFlag: false,
     keepFlag: false,
     likeFlag: false,
-    ratings: 432
+    ratings: 432,
+    comments: [
+      {
+        user: 'Xue',
+        time: null,
+        avatar: '/images/explore2.png',
+        context: 'Nice place, wish to be there one day. Nice place, wish to be there one day. Nice place, wish to be there one day.'
+      }
+    ]
   }
 ]
 //所有城市信息

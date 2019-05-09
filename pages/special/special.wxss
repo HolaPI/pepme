@@ -102,7 +102,6 @@
   font-size: 16px;
   padding: 5px 15px;
   border-bottom: 1px solid #acd54a;
-  border-left: 1px solid #acd54a;
 }
 .container .post-wrapper .post-comment button{
   display: inline-block;

@@ -1,6 +1,7 @@
 // pages/special/special.js
 const cityData = require('../../resource/cityData.js')
 const swiperImg = cityData.special;
+// const detail = [{a: 'apple'}, {b: 'banana'}]
 Page({
 
   /**
