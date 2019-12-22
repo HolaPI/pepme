@@ -3,13 +3,14 @@
     "pages/index/index",
     "pages/explore/explore",
     "pages/me/me",
-    "pages/index/continents/Asia/asia",
-    "pages/index/continents/Africa/africa",
-    "pages/index/continents/Europe/europe",
-    "pages/index/continents/Oceania/oceania",
-    "pages/index/continents/nAmerica/namerica",
-    "pages/index/continents/sAmerica/samerica",
-    "pages/special/special"
+    "pages/continents/Asia/asia",
+    "pages/continents/Africa/africa",
+    "pages/continents/Europe/europe",
+    "pages/continents/Oceania/oceania",
+    "pages/continents/nAmerica/namerica",
+    "pages/continents/sAmerica/samerica",
+    "pages/special/special",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "dark",

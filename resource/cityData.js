@@ -101,7 +101,7 @@ const content = [
   },
   {
     id: 1,
-    src: "http://www.zicasso.com/sites/default/files/styles/original_scaled_down/public/cleanup/sampletrip/Aerial_View1.jpg",
+    src: "http://youimg1.c-ctrip.com/target/100w0400000007z253D9B.png",
     title: "Rio, Brazil: Welcome tourists from all over the world",
     text: "Rio de Janeiro is anchor to the Rio de Janeiro metropolitan area and the second-most populous municipality in Brazil and the sixth-most populous in the Americas.",
     continent: 'samerica',

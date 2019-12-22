@@ -1,8 +1,8 @@
+<!--pages/index/continents/Europe/europe.wxml-->
 <!--pages/index/continents/Asia/asia.wxml-->
-<!-- <include src='/pages/modules/navbar/navbar.wxml'/> -->
 <view class="pic-context-grounp">
       <!-- use for-loop to achieve adding single content part -->
-      <view class="pic-context-item" wx:for="{{ content }}" wx:for-item="contentItem" wx:key="{{ id }}">
+      <view class="pic-context-item" wx:for="{{ content }}" wx:for-item="contentItem" wx:key="*this">
         <view class="round-pic">
           <image src="{{ contentItem.src }}" mode="aspectFill"></image>
         </view>

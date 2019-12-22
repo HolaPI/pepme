@@ -5,7 +5,7 @@
 .container .pic-wrapper image{
   display: flex;
   width: 100%;
-  border-top: 1px solid #acd54a;
+  border-top: 2rpx solid #acd54a;
 }
 .container .title-wrapper{
   /* text-align: center; */
@@ -13,45 +13,45 @@
 }
 .container .article-operation{
   width: 100%;
-  height: 40px;
+  height: 80rpx;
   padding: 0rpx 20rpx 10rpx 20rpx;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid #e9f9b9; 
+  border-bottom: 2rpx solid #e9f9b9; 
 }
 .container .article-operation .icon-wrapper image{
-  height: 35px;
-  width: 35px;
+  height: 70rpx;
+  width: 70rpx;
 }
 .container .article-operation .icon-wrapper text{
   display: inline-block;
-  height: 20px;
-  vertical-align: 12px;
-  font-size: 14px;
+  height: 40rpx;
+  vertical-align: 24rpx;
+  font-size: 28rpx;
 }
 .container .text-wrapper{
   padding: 0rpx 25rpx;
-  font-size: 14px;
+  font-size: 28rpx;
   text-indent: 2em;
 }
 .container .end-info{
   width: 80%;
-  margin-top: 15px;
-  padding-bottom: 15px;
-  border-top: 1px solid #e9f9b9;
+  margin-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-top: 2rpx solid #e9f9b9;
   text-align: center;
   position: relative;
 }
 .container .end-info text{
-  width: 50px;
+  width: 100rpx;
   position: absolute;
-  top: -10px;
+  top: -10rpx;
   z-index: 10;
-  margin-left: -25px;
+  margin-left: -50rpx;
   text-align: center;
-  font-size: 12px;
+  font-size: 24rpx;
   color: #999;
   background: #fff;
 }
@@ -64,7 +64,7 @@
   padding: 10rpx 25rpx;
 }
 .container .comments-wrapper .comment-group > view {
-  font-size: 14px;
+  font-size: 28rpx;
   font-weight: bold;
 }
 .container .comments-wrapper .comment-group .comment-item {
@@ -74,16 +74,16 @@
 }
 .container .comments-wrapper .comment-group .comment-item image.userImg{
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 60rpx;
+  height: 60rpx;
   margin-right: 20rpx;
 }
 .container .comments-wrapper .comment-group .comment-item .comment-content{
   display: inline-block;
   flex: 1;
-  font-size: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #eee;
+  font-size: 24rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 2rpx solid #eee;
 }
 .container .comments-wrapper .comment-group .comment-item .comment-content view{
   text-indent: 1em;
@@ -99,15 +99,16 @@
 .container .post-wrapper .post-comment .input{
   flex: 1;
   display: inline-block;
-  font-size: 16px;
-  padding: 5px 15px;
-  border-bottom: 1px solid #acd54a;
+  font-size: 32rpx;
+  padding: 10rpx 20rpx;
+  border-bottom: 2rpx solid #acd54a;
 }
 .container .post-wrapper .post-comment button{
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 20rpx;
   box-sizing: border-box;
-  border-radius: 6px;
-  border: 1px solid #acd54a;
+  border-radius: 12rpx;
+  border: 1rpx solid #acd54a;
   background-color: #e9f9b9;
+  line-height: 76rpx;
 }

@@ -16,7 +16,8 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     swiperImg: swiperImg,
     shareLikeIcon: shareLikeIcon,
-    content: content
+    content: content,
+    contentId: null
   },
   /**
    * share-like icons click event
@@ -24,14 +25,14 @@ Page({
   shareItem(e){
     const self = this;
     let pos = e.target.dataset.id
-  //标记分享状态
-  content[pos].shareFlag = !content[pos].shareFlag
-  this.setData({
-      //更新content内容
-      content: content
-    })
-  //点击触发短振动
-  wx.vibrateShort({})
+    //标记分享状态
+    content[pos].shareFlag = !content[pos].shareFlag
+    this.setData({
+        //更新content内容
+        content: content
+      })
+    //点击触发短振动
+    wx.vibrateShort()
   },
   keepItem(e) {
     const self = this;
@@ -40,7 +41,7 @@ Page({
     this.setData({
       content: content
     })
-  wx.vibrateShort({})
+    wx.vibrateShort()
   },
   likeItem(e) {
     const self = this;
@@ -49,7 +50,16 @@ Page({
     this.setData({
       content: content
     })
-    wx.vibrateShort({})
+    wx.vibrateShort()
+  },
+  showDetail(e){
+    let contentId = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/detail/detail?contentId=' + contentId,
+    })
+    this.setData({
+      contentId: contentId
+    })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -82,6 +92,7 @@ Page({
   onPullDownRefresh(){
     setTimeout(function(){
       console.log('Here we see the fantastic world')
+      wx.stopPullDownRefresh()
     }, 2000)
   },
   getUserInfo: function(e) {

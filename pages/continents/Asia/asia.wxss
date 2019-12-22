@@ -2,14 +2,14 @@
 .pic-context-grounp .pic-context-item{
   display: flex;
   justify-content: space-around;
-  height: 90px;
+  height: 180rpx;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 16rpx;
   /* background-color: #eee; */
   /* border-bottom: 1px solid #ddd; */
 }
 .pic-context-grounp .pic-context-item .round-pic{
-  width: 90px;
+  width: 180rpx;
   overflow: hidden;
   /* border: 1px solid blue; */
 }
@@ -19,29 +19,29 @@
   border-radius: 50%;
 }
 .pic-context-grounp .pic-context-item .item-context{
-  width: calc(96% - 120px);
-  padding-top: 2px;
+  width: calc(96% - 240rpx);
+  padding-top: 4rpx;
   /* border: 1px solid blue; */
-  border-bottom: 1px solid #e9f9b9;
+  border-bottom: 2rpx solid #e9f9b9;
   
 }
 .pic-context-grounp .pic-context-item .item-context .context-title{
-  height: 20px;
-  line-height: 20px;
-  font-size: 14px;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .pic-context-grounp .pic-context-item .item-context .context-text{
-  height: 70px;
-  font-size: 12px;
-  line-height: 16px;
+  height: 140rpx;
+  font-size: 24rpx;
+  line-height: 32rpx;
   word-break: break-all;
 }
 .pic-context-grounp .pic-context-item .share-like{
-  width: 30px;
+  width: 60rpx;
   display: flex;
   flex-direction: column;
   /* border: 1px solid blue; */

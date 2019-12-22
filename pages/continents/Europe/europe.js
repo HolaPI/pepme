@@ -1,5 +1,5 @@
 // pages/index/continents/Asia/asia.js
-const cityData = require('../../../../resource/cityData.js')
+const cityData = require('../../../resource/cityData.js')
 const shareLikeIcon = cityData.shareLikeIcon;
 //过滤出亚洲城市
 const content = cityData.content.filter(city => {

@@ -1,0 +1,13 @@
+<!-- navebar -->
+<view class="horizon-menu">
+      <view class="navbar" id="firstline">
+        <navigator url="../continents/Asia/asia">Asia</navigator>
+        <navigator url="../continents/Europe/europe">Europe</navigator>
+        <navigator url="../continents/nAmerica/namerica">nAmerica</navigator>
+      </view>
+      <view class="navbar">
+        <navigator url="../continents/Africa/africa">Africa</navigator>
+        <navigator url="../continents/Oceania/oceania">Oceania</navigator>
+        <navigator url="../continents/sAmerica/samerica">sAmeirca</navigator>
+      </view>
+</view>

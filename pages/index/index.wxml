@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <!-- header-swiper part -->
-  <swiper class="header-swiper-group" indicator-dots indicator-color="#fff" indicator-active-color="#ff4a20" current-item-id="0" circular='true' autoplay='true'>
-    <swiper-item wx:for="{{ swiperImg }}" wx:for-item="swiperPic" wx:key="{{ id }}" item-id="{{ swiperPic.id }}">
+  <swiper class="header-swiper-group" indicator-dots indicator-color="#e9f9b9" indicator-active-color="#ff4a20" current-item-id="0" circular='true' autoplay='true'>
+    <swiper-item wx:for="{{ swiperImg }}" wx:for-item="swiperPic" wx:key="*this" item-id="{{ swiperPic.id }}">
       <navigator url="../special/special?imgId={{ swiperPic.id }}">
         <image src="{{ swiperPic.src }}"></image>
       </navigator>
@@ -10,30 +10,47 @@
   </swiper>
   <view class="home-main-content">
     <!-- include navbar for modules file -->
-    <include src="/pages/modules/navbar/navbar.wxml"/>
+    <include src="/modules/navbar/navbar.wxml"/>
     <!-- main content area -->
     <view class="pic-context-grounp">
       <!-- use for-loop to achieve adding single content part -->
-      <view class="pic-context-item" wx:for="{{ content }}" wx:for-item="contentItem" wx:key="{{ id }}">
-        <view class="round-pic">
-          <image src="{{ contentItem.src }}" mode="aspectFill"></image>
-        </view>
-        <view class="item-context">
-          <view class="context-title">
-            <text>{{ contentItem.title }}</text>
+      <!-- <navigator url="../detail?contentId={{ contentId }}"> -->
+        <view 
+          class="pic-context-item" 
+          wx:for="{{ content }}" 
+          wx:for-item="contentItem" 
+          wx:key="*this"
+          data-id="{{ contentItem.id }}"
+          bindtap="showDetail">
+          <view class="round-pic">
+            <image src="{{ contentItem.src }}" mode="aspectFill"></image>
           </view>
-          <view class="context-text">
-            <text>{{ contentItem.text }}</text>
+          <view class="item-context">
+            <view class="context-title">
+              <text>{{ contentItem.title }}</text>
+            </view>
+            <view class="context-text">
+              <text>{{ contentItem.text }}</text>
+            </view>
+          </view>
+          <!-- add share-like-keep icons -->
+          <view class="share-like">
+          <!-- bind event respectively for three kinds of icons -->
+            <image 
+            src="{{ !contentItem.shareFlag ? shareLikeIcon[0].bfeSrc : shareLikeIcon[0].aftSrc}}"
+            catchtap="shareItem" 
+            data-id="{{ contentItem.id }}"></image>
+            <image 
+            src="{{ !contentItem.keepFlag ? shareLikeIcon[1].bfeSrc : shareLikeIcon[1].aftSrc }}" 
+            catchtap="keepItem" 
+            data-id="{{ contentItem.id }}" ></image>
+            <image 
+            src="{{ !contentItem.likeFlag ? shareLikeIcon[2].bfeSrc : shareLikeIcon[2].aftSrc }}" 
+            catchtap="likeItem" 
+            data-id="{{ contentItem.id }}"></image>
           </view>
         </view>
-        <!-- add share-like-keep icons -->
-        <view class="share-like">
-        <!-- bind event respectively for three kinds of icons -->
-          <image src="{{ !contentItem.shareFlag ? shareLikeIcon[0].bfeSrc : shareLikeIcon[0].aftSrc}}" bindtap="shareItem" data-id="{{ contentItem.id }}"></image>
-          <image src="{{ !contentItem.keepFlag ? shareLikeIcon[1].bfeSrc : shareLikeIcon[1].aftSrc }}" bindtap="keepItem" data-id="{{ contentItem.id }}" ></image>
-          <image src="{{ !contentItem.likeFlag ? shareLikeIcon[2].bfeSrc : shareLikeIcon[2].aftSrc }}" bindtap="likeItem" data-id="{{ contentItem.id }}"></image>
-        </view>
-      </view>
+      <!-- </navigator> -->
     </view>
   </view>
 </view>

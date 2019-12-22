@@ -1,15 +1,21 @@
 /**index.wxss**/
 .container .header-swiper-group{
   width: 100%;
-  border-top: 1px solid #acd54a;
+  border-top: 2rpx solid #acd54a;
   /* border: 1px solid #ff4400; */
-  height: 200px;
+  height: 400rpx;
 }
+
 .header-swiper-group swiper-item image{
   width: 100%;
 }
 .container .home-main-content{
   width: 100%;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }
 .home-main-content .horizon-menu{
   background-color: #e9f9b9;
@@ -20,25 +26,25 @@
   justify-content: space-around; 
 }
 .home-main-content .horizon-menu #firstline{
-  border-bottom: 1px solid #acd54a;
+  border-bottom: 2rpx solid #acd54a;
 }
 .horizon-menu .navbar navigator{
   flex: 1;
   text-align: center;
   font-weight: bold;
-  padding: 5px 0px;
+  padding: 10rpx 0px;
 }
 .pic-context-grounp .pic-context-item{
   display: flex;
   justify-content: space-around;
-  height: 90px;
+  height: 180rpx;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 16rpx;
   /* background-color: #eee; */
   /* border-bottom: 1px solid #ddd; */
 }
 .pic-context-grounp .pic-context-item .round-pic{
-  width: 90px;
+  width: 180rpx;
   overflow: hidden;
   /* border: 1px solid blue; */
 }
@@ -48,29 +54,29 @@
   border-radius: 50%;
 }
 .pic-context-grounp .pic-context-item .item-context{
-  width: calc(96% - 120px);
-  padding-top: 2px;
+  width: calc(96% - 240rpx);
+  padding-top: 4rpx;
   /* border: 1px solid blue; */
-  border-bottom: 1px solid #e9f9b9;
+  border-bottom: 2rpx solid #e9f9b9;
   
 }
 .pic-context-grounp .pic-context-item .item-context .context-title{
-  height: 20px;
-  line-height: 20px;
-  font-size: 14px;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .pic-context-grounp .pic-context-item .item-context .context-text{
-  height: 70px;
-  font-size: 12px;
-  line-height: 16px;
+  height: 140rpx;
+  font-size: 24rpx;
+  line-height: 32rpx;
   word-break: break-all;
 }
 .pic-context-grounp .pic-context-item .share-like{
-  width: 30px;
+  width: 60rpx;
   display: flex;
   flex-direction: column;
   /* border: 1px solid blue; */
